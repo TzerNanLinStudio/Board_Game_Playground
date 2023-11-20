@@ -8,7 +8,7 @@ This project was developed in my spare time, inspired by my and a few friends' l
 
 I will briefly introduce the functionality and usage of this software in the following section. Everyone is welcome to download and test it from GitHub. If there are any questions, feel free to email me.
 
-# 2. Software Description
+# 2. Software Application Description
 
 ## 2.1. Game Menu
 
