@@ -1,0 +1,6 @@
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\bin\Debug\GameCore.dll
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\bin\Debug\GameCore.pdb
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\obj\Debug\GameCore_Blokus.csproj.AssemblyReference.cache
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\obj\Debug\GameCore_Blokus.csproj.CoreCompileInputs.cache
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\obj\Debug\GameCore.dll
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\GameCore_Blokus\obj\Debug\GameCore.pdb

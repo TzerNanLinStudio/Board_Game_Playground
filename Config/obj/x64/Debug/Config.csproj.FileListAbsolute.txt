@@ -1,0 +1,17 @@
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\bin\x64\Debug\Config_sharp.dll
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\bin\x64\Debug\Config_sharp.pdb
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config.csproj.CoreCompileInputs.cache
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config_sharp.dll
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config_sharp.pdb
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\bin\x64\Debug\Config_sharp.dll
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\bin\x64\Debug\Config_sharp.pdb
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config.csproj.CoreCompileInputs.cache
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config_sharp.dll
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config_sharp.pdb
+C:\Users\Ned\Desktop\AOI_TenSurface(V.New)\Config\obj\x64\Debug\Config.csprojAssemblyReference.cache
+C:\Users\Ned\Desktop\Test01\Config\bin\x64\Debug\Config_sharp.dll
+C:\Users\Ned\Desktop\Test01\Config\bin\x64\Debug\Config_sharp.pdb
+C:\Users\Ned\Desktop\Test01\Config\obj\x64\Debug\Config.csproj.CoreCompileInputs.cache
+C:\Users\Ned\Desktop\Test01\Config\obj\x64\Debug\Config_sharp.dll
+C:\Users\Ned\Desktop\Test01\Config\obj\x64\Debug\Config_sharp.pdb
+C:\Users\Ned\Desktop\Test01\Config\obj\x64\Debug\Config.csprojAssemblyReference.cache

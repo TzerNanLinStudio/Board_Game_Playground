@@ -1,0 +1,6 @@
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\bin\x64\Release\Config_sharp.dll
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\bin\x64\Release\Config_sharp.pdb
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Release\Config.csproj.CoreCompileInputs.cache
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Release\Config_sharp.dll
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Release\Config_sharp.pdb
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\Config\obj\x64\Release\Config.csprojAssemblyReference.cache

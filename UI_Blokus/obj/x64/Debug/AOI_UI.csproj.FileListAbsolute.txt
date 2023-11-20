@@ -1,0 +1,16 @@
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\AOI_UI.csprojAssemblyReference.cache
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\AdjustmentUI.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\CameraSetting.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\CameraView_E1.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\CameraView_E2.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\CameraView_E3.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\LoginUI.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\MainWindow.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\OffsetSetting.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\PLCUI.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\RecordUI.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\SettingUI.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\App.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\AOI_UI_MarkupCompile.cache
+C:\Users\DEEPWISE\Desktop\TenSurface\Code\AOI_TenSurface(V.New)\AOI_UI\obj\x64\Debug\AOI_UI_MarkupCompile.lref

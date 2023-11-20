@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="AOI_UI.CameraSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"      
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AOI_UI"
+             mc:Ignorable="d" 
+             FontFamily="Microsoft JhengHei"
+             FontSize="12"
+             Background="SkyBlue"
+             d:DesignHeight="114" d:DesignWidth="360">
+
+    <Control.Resources>
+        <Style x:Key="buttonHover" TargetType="Button">
+            <Setter Property="Background" Value="#8a8c8e"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" Background="{TemplateBinding Background}" BorderThickness="3" BorderBrush="Black" CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Button.IsPressed" Value="True">
+                                <Setter TargetName="border" Property="BorderThickness" Value="5" />
+                            </Trigger>
+                            <Trigger Property="Button.IsPressed" Value="True">
+                                <Setter Property="Background" Value="#d3d7d4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Control.Resources>
+
+    <Grid>
+        <GroupBox Header="攝影機設定" HorizontalAlignment="Left" Height="114" Width="360" VerticalAlignment="Top" Margin="0,0,0,-14">
+            <Grid>
+                <Button x:Name="Btn_CameraConfig" HorizontalAlignment="Left" Margin="267,10,0,0" VerticalAlignment="Top" Width="71" Height="71" Click="Btn_CameraConfig_Click" Style="{StaticResource buttonHover}">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="Image_CameraConfig" Source="/UI/SaveParameter.ico" Height="12"/>
+                            <TextBlock x:Name="TextBlock_CameraConfig" Text=" 設定儲存"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Label x:Name="Lab_CameraExposure" Content="攝影機曝光(......) : " Margin="10,6,0,0" HorizontalAlignment="Left" Width="150" Height="24" VerticalAlignment="Top" />
+                <Label x:Name="Lab_CameraGain" Content="攝影機增益(......) : " Margin="10,31,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" />
+                <Label x:Name="Lab_CameraFPS" Content="攝影機幀數(......) : " Margin="10,57,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" />
+                <WindowsFormsHost Margin="162,10,0,0" Height="20" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top">
+                    <wf:NumericUpDown x:Name="NumericUpDown_CameraExposure" AccessibleName="NumericUpDown_CameraExposure" Minimum="0" Maximum="100000" Value="0" ValueChanged="NumericUpDown_CameraParameter_ValueChanged"/>
+                </WindowsFormsHost>
+                <WindowsFormsHost Margin="162,35,0,0" Height="20" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top">
+                    <wf:NumericUpDown x:Name="NumericUpDown_CameraGain" AccessibleName="NumericUpDown_CameraGain" Minimum="0" Maximum="100000" Value="0" ValueChanged="NumericUpDown_CameraParameter_ValueChanged"/>
+                </WindowsFormsHost>
+                <WindowsFormsHost Margin="162,61,0,0" Height="20" HorizontalAlignment="Left" Width="100" VerticalAlignment="Top">
+                    <wf:NumericUpDown x:Name="NumericUpDown_CameraFPS" AccessibleName="NumericUpDown_CameraFPS" Minimum="0" Maximum="100000" Value="0" ValueChanged="NumericUpDown_CameraParameter_ValueChanged"/>
+                </WindowsFormsHost>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</UserControl>

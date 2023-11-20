@@ -1,0 +1,150 @@
+﻿<Window x:Class="UI_Blokus.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_Blokus"
+        xmlns:emgu="clr-namespace:Emgu.CV.UI;assembly=Emgu.CV.UI"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+        mc:Ignorable="d"
+        FontSize="12"
+        FontFamily="Microsoft JhengHei"
+        Background="SkyBlue"
+        Icon="/Icon/Bloku.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="德國圍棋" Height="900.0" Width="1200.0" Closing="MainWindow_Closing">
+
+    <Window.Resources>
+        <Style x:Key="buttonHover" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#8a8c8e"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="3" BorderBrush="Black" CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="BorderThickness" Value="5" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#d3d7d4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid KeyDown="OnKeyDownHandler">
+        <Border Background="DarkOrange">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" MinHeight="20" MaxHeight="20">
+                    <Menu FontSize="12" HorizontalAlignment="Left" Height="20" Width="1200" VerticalAlignment="Top"  Background="OrangeRed">
+                        <MenuItem x:Name="MenuItem_Setting" Header="設定" Visibility="Visible">
+                            <MenuItem x:Name="MenuItem_NewGame" Header="重新" Click="MenuItem_Click"/>
+                            <MenuItem x:Name="MenuItem_EndGame" Header="結算" Click="MenuItem_Click"/>
+                        </MenuItem>
+                        <MenuItem x:Name="MenuItem_Tool" Header="工具" Visibility="Visible">
+                            <MenuItem x:Name="MenuItem_Image_Record" Header="影像留存" IsCheckable="True" Checked="MenuItem_Checked" Unchecked="MenuItem_Unchecked"/>
+                            <MenuItem x:Name="MenuItem_Image_Clear" Header="影像清除" Click="MenuItem_Click"/>
+                            <MenuItem x:Name="MenuItem_AOI_Restart" Header="重新啟動" Click="MenuItem_Click"/>
+                        </MenuItem>
+                        <MenuItem x:Name="MenuItem_Help" Header="說明" Visibility="Visible">
+                            <MenuItem x:Name="MenuItem_Description" Header="檢視說明" Click="MenuItem_Click"/>
+                        </MenuItem>
+                        <MenuItem x:Name="MenuItem_Debug" Header="Debug" IsEnabled="True" Visibility="Visible">
+                            <MenuItem x:Name="MenuItem_DebugFunction01" Header="功能(1)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction02" Header="功能(2)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction03" Header="功能(3)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction04" Header="功能(4)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction05" Header="功能(5)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
+                            <Separator/>
+                            <MenuItem x:Name="MenuItem_DebugFunction06" Header="功能(6)" ToolTip="測試測試" Click="MenuItem_Test_Click"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction07" Header="功能(7)" Click="MenuItem_Test_Click"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction08" Header="功能(8)" Click="MenuItem_Test_Click"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction09" Header="功能(9)" Click="MenuItem_Test_Click"/>
+                            <MenuItem x:Name="MenuItem_DebugFunction10" Header="功能(10)" Click="MenuItem_Test_Click"/>
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" MinHeight="600" MaxHeight="600">
+                    <local:TwentyBox x:Name="TwentyBox_Board"/>
+                    <TabControl x:Name="TabControl_Player" SelectionChanged="TabControl_Selected">
+                        <TabItem Header="藍方">
+                            <Grid>
+                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Blue"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="綠方">
+                            <Grid>
+                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Green"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="紅方">
+                            <Grid>
+                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Red"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="黃方">
+                            <Grid>
+                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Yellow"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" MinHeight="120" MaxHeight="120">
+                    <TabControl TabStripPlacement="Top" HorizontalAlignment="Left" Width="1200" Height="120" VerticalAlignment="Top">
+                        <TabControl.Resources>
+                            <Style TargetType="{x:Type TabItem}">
+                                <Setter Property="BorderThickness" Value="10"/>
+                                <Setter Property="Padding" Value="0" />
+                                <Setter Property="HeaderTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <Border x:Name="grid" Background="OrangeRed">
+                                                <ContentPresenter>
+                                                    <ContentPresenter.Content>
+                                                        <TextBlock Margin="4" FontSize="12" Text="{TemplateBinding Content}"/>
+                                                    </ContentPresenter.Content>
+                                                    <ContentPresenter.LayoutTransform>
+                                                        <RotateTransform Angle="0" />
+                                                    </ContentPresenter.LayoutTransform>
+                                                </ContentPresenter>
+                                            </Border>
+                                            <DataTemplate.Triggers>
+                                                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType={x:Type TabItem}, Mode=FindAncestor}}" Value="True">
+                                                    <Setter TargetName="grid" Property="Background" Value="OrangeRed"/>
+                                                </DataTrigger>
+                                            </DataTemplate.Triggers>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                            <Style TargetType="{x:Type Paragraph}">
+                                <Setter Property="Margin" Value="0" />
+                            </Style>
+                        </TabControl.Resources>
+                        <TabControl.BitmapEffect>
+                            <DropShadowBitmapEffect Color="Black" Direction="270"/>
+                        </TabControl.BitmapEffect>
+                        <TabItem Header="資訊">
+                            <RichTextBox x:Name="RichTextBox_GeneralLog" IsReadOnly="True" Margin="0,0,0,0"/>
+                        </TabItem>
+                        <TabItem Header="警告">
+                            <RichTextBox x:Name="RichTextBox_WarningLog" IsReadOnly="True" Margin="0,0,0,0"/>
+                        </TabItem>
+                        <TabItem Header="錯誤">
+                            <RichTextBox x:Name="RichTextBox_ErrorLog" IsReadOnly="True" Margin="0,0,0,0"/>
+                        </TabItem>
+                        <TabItem x:Name="TabItem_DebugLog" Header="Debug" Visibility="Visible">
+                            <RichTextBox x:Name="RichTextBox_DebugLog" IsReadOnly="True" Margin="0,0,0,0"/>
+                        </TabItem>
+                    </TabControl>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
