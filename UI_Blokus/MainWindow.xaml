@@ -12,7 +12,7 @@
         Background="SkyBlue"
         Icon="/Icon/Bloku.ico"
         WindowStartupLocation="CenterScreen"
-        Title="德國圍棋" Height="900.0" Width="1200.0" Closing="MainWindow_Closing">
+        Title="德國圍棋" Height="790.0" Width="1050.0" Closing="MainWindow_Closing">
 
     <Window.Resources>
         <Style x:Key="buttonHover" TargetType="{x:Type Button}">
@@ -96,7 +96,7 @@
                     </TabControl>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" MinHeight="120" MaxHeight="120">
-                    <TabControl TabStripPlacement="Top" HorizontalAlignment="Left" Width="1200" Height="120" VerticalAlignment="Top">
+                    <TabControl TabStripPlacement="Top" HorizontalAlignment="Left" Width="1025" Height="120" VerticalAlignment="Top">
                         <TabControl.Resources>
                             <Style TargetType="{x:Type TabItem}">
                                 <Setter Property="BorderThickness" Value="10"/>
