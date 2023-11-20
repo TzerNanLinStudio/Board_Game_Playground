@@ -12,25 +12,25 @@ I will briefly introduce the functionality and usage of this software in the fol
 
 ## 2.1. Game Menu
 
-![Image Error](./Image/image_01.png)
+![Image Error](./Other/Image/image_01.png)
 
 (Explaination will be updated soon)
 
 ## 2.2. The First Game - Blokus
 
-![Image Error](./Image/image_02.png)
+![Image Error](./Other/Image/image_02.png)
 
-![Image Error](./Image/image_03.png)
+![Image Error](./Other/Image/image_03.png)
 
-![Image Error](./Image/image_04.png)
+![Image Error](./Other/Image/image_04.png)
 
-![Image Error](./Image/image_05.png)
+![Image Error](./Other/Image/image_05.png)
 
 (Explaination will be updated soon)
 
 ## 2.3. The Second Game - Chinese Checkers
 
-![Image Error](./Image/image_06.png)
+![Image Error](./Other/Image/image_06.png)
 
 (Explaination will be updated soon)
 
