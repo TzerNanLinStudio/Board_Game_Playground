@@ -17,26 +17,6 @@
 
     <Grid KeyDown="Grid_KeyDown">
         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="IP : "/>
-                <TextBox x:Name="TextBox_IP" Height="25" Width="150"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" MinHeight="20" MaxHeight="100">
-                <Button x:Name="Btn_TcpServer" Height="30" Width="75" Click="Btn_Click">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Server"/>
-                        </StackPanel>
-                    </Button.Content>
-                </Button>
-                <Button x:Name="Btn_TcpClient" Height="30" Width="75" Click="Btn_Click">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Client"/>
-                        </StackPanel>
-                    </Button.Content>
-                </Button>
-            </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" MinHeight="20" MaxHeight="100">
                 <Button x:Name="Btn_Blokus" Height="30" Width="75" Click="Btn_Click">
                     <Button.Content>

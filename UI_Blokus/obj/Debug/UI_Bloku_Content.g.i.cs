@@ -8,18 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/bluemouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/bluemouse.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/chinesecheckers.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/greenmouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/greenmouse.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/orangemouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/orangemouse.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/purplemouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/purplemouse.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/redmouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/redmouse.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/yellowmouse.cur")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/yellowmouse.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon/rotate.ico")]
 
 

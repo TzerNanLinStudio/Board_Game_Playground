@@ -269,6 +269,12 @@
     <Resource Include="Icon\YellowMouse.cur" />
     <Resource Include="Icon\YellowMouse.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\Rotate.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -232,7 +232,7 @@ namespace GameCore_Blokus
                         }
                         break;
 
-                    case "MenuItem_Click":
+                    case "Btn_Click":
                         {
                             switch (m_Array[1])
                             {

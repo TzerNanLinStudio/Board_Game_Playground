@@ -12,7 +12,7 @@
         Background="SkyBlue"
         Icon="/Icon/Bloku.ico"
         WindowStartupLocation="CenterScreen"
-        Title="德國圍棋" Height="790.0" Width="1050.0" Closing="MainWindow_Closing">
+        Title="德國圍棋" Height="650.0" Width="1080.0" Closing="MainWindow_Closing">
 
     <Window.Resources>
         <Style x:Key="buttonHover" TargetType="{x:Type Button}">
@@ -40,109 +40,68 @@
 
     <Grid KeyDown="OnKeyDownHandler">
         <Border Background="DarkOrange">
-            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
-                <StackPanel Orientation="Horizontal" MinHeight="20" MaxHeight="20">
-                    <Menu FontSize="12" HorizontalAlignment="Left" Height="20" Width="1200" VerticalAlignment="Top"  Background="OrangeRed">
-                        <MenuItem x:Name="MenuItem_Setting" Header="設定" Visibility="Visible">
-                            <MenuItem x:Name="MenuItem_NewGame" Header="重新" Click="MenuItem_Click"/>
-                            <MenuItem x:Name="MenuItem_EndGame" Header="結算" Click="MenuItem_Click"/>
-                        </MenuItem>
-                        <MenuItem x:Name="MenuItem_Tool" Header="工具" Visibility="Visible">
-                            <MenuItem x:Name="MenuItem_Image_Record" Header="影像留存" IsCheckable="True" Checked="MenuItem_Checked" Unchecked="MenuItem_Unchecked"/>
-                            <MenuItem x:Name="MenuItem_Image_Clear" Header="影像清除" Click="MenuItem_Click"/>
-                            <MenuItem x:Name="MenuItem_AOI_Restart" Header="重新啟動" Click="MenuItem_Click"/>
-                        </MenuItem>
-                        <MenuItem x:Name="MenuItem_Help" Header="說明" Visibility="Visible">
-                            <MenuItem x:Name="MenuItem_Description" Header="檢視說明" Click="MenuItem_Click"/>
-                        </MenuItem>
-                        <MenuItem x:Name="MenuItem_Debug" Header="Debug" IsEnabled="True" Visibility="Visible">
-                            <MenuItem x:Name="MenuItem_DebugFunction01" Header="功能(1)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction02" Header="功能(2)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction03" Header="功能(3)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction04" Header="功能(4)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction05" Header="功能(5)" IsCheckable="True" Checked="MenuItem_Test_Checked" Unchecked="MenuItem_Test_Unchecked"/>
-                            <Separator/>
-                            <MenuItem x:Name="MenuItem_DebugFunction06" Header="功能(6)" ToolTip="測試測試" Click="MenuItem_Test_Click"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction07" Header="功能(7)" Click="MenuItem_Test_Click"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction08" Header="功能(8)" Click="MenuItem_Test_Click"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction09" Header="功能(9)" Click="MenuItem_Test_Click"/>
-                            <MenuItem x:Name="MenuItem_DebugFunction10" Header="功能(10)" Click="MenuItem_Test_Click"/>
-                        </MenuItem>
-                    </Menu>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" MinHeight="600" MaxHeight="600">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <local:TwentyBox x:Name="TwentyBox_Board"/>
-                    <TabControl x:Name="TabControl_Player" SelectionChanged="TabControl_Selected">
-                        <TabItem Header="藍方">
-                            <Grid>
-                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Blue"/>
-                            </Grid>
-                        </TabItem>
-                        <TabItem Header="綠方">
-                            <Grid>
-                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Green"/>
-                            </Grid>
-                        </TabItem>
-                        <TabItem Header="紅方">
-                            <Grid>
-                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Red"/>
-                            </Grid>
-                        </TabItem>
-                        <TabItem Header="黃方">
-                            <Grid>
-                                <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Yellow"/>
-                            </Grid>
-                        </TabItem>
-                    </TabControl>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" MinHeight="120" MaxHeight="120">
-                    <TabControl TabStripPlacement="Top" HorizontalAlignment="Left" Width="1025" Height="120" VerticalAlignment="Top">
-                        <TabControl.Resources>
-                            <Style TargetType="{x:Type TabItem}">
-                                <Setter Property="BorderThickness" Value="10"/>
-                                <Setter Property="Padding" Value="0" />
-                                <Setter Property="HeaderTemplate">
-                                    <Setter.Value>
-                                        <DataTemplate>
-                                            <Border x:Name="grid" Background="OrangeRed">
-                                                <ContentPresenter>
-                                                    <ContentPresenter.Content>
-                                                        <TextBlock Margin="4" FontSize="12" Text="{TemplateBinding Content}"/>
-                                                    </ContentPresenter.Content>
-                                                    <ContentPresenter.LayoutTransform>
-                                                        <RotateTransform Angle="0" />
-                                                    </ContentPresenter.LayoutTransform>
-                                                </ContentPresenter>
-                                            </Border>
-                                            <DataTemplate.Triggers>
-                                                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType={x:Type TabItem}, Mode=FindAncestor}}" Value="True">
-                                                    <Setter TargetName="grid" Property="Background" Value="OrangeRed"/>
-                                                </DataTrigger>
-                                            </DataTemplate.Triggers>
-                                        </DataTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                            <Style TargetType="{x:Type Paragraph}">
-                                <Setter Property="Margin" Value="0" />
-                            </Style>
-                        </TabControl.Resources>
-                        <TabControl.BitmapEffect>
-                            <DropShadowBitmapEffect Color="Black" Direction="270"/>
-                        </TabControl.BitmapEffect>
-                        <TabItem Header="資訊">
-                            <RichTextBox x:Name="RichTextBox_GeneralLog" IsReadOnly="True" Margin="0,0,0,0"/>
-                        </TabItem>
-                        <TabItem Header="警告">
-                            <RichTextBox x:Name="RichTextBox_WarningLog" IsReadOnly="True" Margin="0,0,0,0"/>
-                        </TabItem>
-                        <TabItem Header="錯誤">
-                            <RichTextBox x:Name="RichTextBox_ErrorLog" IsReadOnly="True" Margin="0,0,0,0"/>
-                        </TabItem>
-                        <TabItem x:Name="TabItem_DebugLog" Header="Debug" Visibility="Visible">
-                            <RichTextBox x:Name="RichTextBox_DebugLog" IsReadOnly="True" Margin="0,0,0,0"/>
-                        </TabItem>
-                    </TabControl>
+                    <StackPanel Orientation="Vertical" >
+                        <Border BorderBrush="OrangeRed" BorderThickness="10,10,10,5" Padding="5">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                <Label Content="系統資訊" HorizontalAlignment="Center"/>
+                                <RichTextBox x:Name="RichTextBox_SystemLog" Background="White" HorizontalAlignment="Center" IsReadOnly="True" Width="380" Height="200"/>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderBrush="OrangeRed" BorderThickness="10,5,10,5" Padding="5">
+                            <TabControl x:Name="TabControl_Player" SelectionChanged="TabControl_Selected">
+                                <TabControl.Resources>
+                                    <Style TargetType="{x:Type TabPanel}">
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    </Style>
+                                </TabControl.Resources>
+                                <TabItem Header="藍方" Width="100">
+                                    <Grid>
+                                        <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Blue"/>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="綠方" Width="100">
+                                    <Grid>
+                                        <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Green"/>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="紅方" Width="100">
+                                    <Grid>
+                                        <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Red"/>
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="黃方" Width="100">
+                                    <Grid>
+                                        <local:TwemtyOnePiece x:Name="TwemtyOnePiece_Yellow"/>
+                                    </Grid>
+                                </TabItem>
+                            </TabControl>
+                        </Border>
+                        <Border BorderBrush="OrangeRed" BorderThickness="10,5,10,10" Padding="5" Height="90">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Border Height="30" Width="105">
+                                    <Button x:Name="Btn_NewGame" Height="30" Width="75" Click="Btn_Click">
+                                        <Button.Content>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="重新"/>
+                                            </StackPanel>
+                                        </Button.Content>
+                                    </Button>
+                                </Border>
+                                <Border Height="30" Width="105">
+                                    <Button x:Name="Btn_EndGame" Height="30" Width="75" Click="Btn_Click">
+                                        <Button.Content>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="結算"/>
+                                            </StackPanel>
+                                        </Button.Content>
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Border>

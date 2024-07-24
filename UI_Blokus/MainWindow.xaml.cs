@@ -225,7 +225,7 @@ namespace UI_Blokus
 
                                 case "Message":
                                     {
-                                        WriteLogOnUI("General", m_Array[2]);
+                                        WriteLogOnUI(m_Array[2]);
                                     }
                                     break;
 
@@ -284,9 +284,6 @@ namespace UI_Blokus
                 (TabControl_Player.Items[1] as System.Windows.Controls.TabItem).IsEnabled = false;
                 (TabControl_Player.Items[2] as System.Windows.Controls.TabItem).IsEnabled = false;
                 (TabControl_Player.Items[3] as System.Windows.Controls.TabItem).IsEnabled = false;
-
-                MenuItem_Debug.Visibility = System.Windows.Visibility.Hidden;
-                TabItem_DebugLog.Visibility = System.Windows.Visibility.Hidden;
 
                 GameBoard = TwentyBox_Board;
                 GameBoard.TwentyBoxHandleEvent += Board_Event;
@@ -427,38 +424,18 @@ namespace UI_Blokus
             }
             catch (Exception ex)
             {
-                WriteLogOnUI("Error", "Initialized Error In Log. Message: " + ex.Message);
+                WriteLogOnUI("Initialized Error In Log. Message: " + ex.Message);
             }
 
             //if (LogWritter != null) IsLogInitSuccess = true;
         }
 
-        public void WriteLogOnUI(string m_Mode, string m_Word)
+        public void WriteLogOnUI(string m_Word)
         {
             string m_DateTime = TimeFormat(1, DateTime.Now);
 
-            switch (m_Mode)
-            {
-                case "General":
-                    Dispatcher.Invoke(() => RichTextBox_GeneralLog.Document.Blocks.Add(new Paragraph(new Run(m_DateTime + m_Word))));
-                    Dispatcher.Invoke(() => RichTextBox_GeneralLog.ScrollToEnd());
-                    break;
-
-                case "Warning":
-                    Dispatcher.Invoke(() => RichTextBox_WarningLog.Document.Blocks.Add(new Paragraph(new Run(m_DateTime + m_Word))));
-                    Dispatcher.Invoke(() => RichTextBox_WarningLog.ScrollToEnd());
-                    break;
-
-                case "Error":
-                    Dispatcher.Invoke(() => RichTextBox_ErrorLog.Document.Blocks.Add(new Paragraph(new Run(m_DateTime + m_Word))));
-                    Dispatcher.Invoke(() => RichTextBox_ErrorLog.ScrollToEnd());
-                    break;
-
-                default:
-                    Dispatcher.Invoke(() => RichTextBox_WarningLog.Document.Blocks.Add(new Paragraph(new Run(m_DateTime + "Input Value Was Not Suitable When Log Was Writing."))));
-                    Dispatcher.Invoke(() => RichTextBox_WarningLog.ScrollToEnd());
-                    break;
-            }
+            Dispatcher.Invoke(() => RichTextBox_SystemLog.Document.Blocks.Add(new Paragraph(new Run(m_DateTime + m_Word))));
+            Dispatcher.Invoke(() => RichTextBox_SystemLog.ScrollToEnd());
         }
 
         public void DeleteSrcFolder(string file, bool itself)
@@ -512,70 +489,6 @@ namespace UI_Blokus
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             ShowWindow(Hwnd, SW_HIDE);
-        }
-
-        private void MenuItem_Checked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Checked. Message:" + Ex.Message);
-            }
-        }
-
-        private void MenuItem_Unchecked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Unchecked. Message:" + Ex.Message);
-            }
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    case "MenuItem_NewGame":
-                        {
-                            GameData.InputFromUI("MenuItem_Click" + "," + "NewGame" + "," + "End");
-                            GamePiece[0].FiveBox_Unlock();
-                            GamePiece[1].FiveBox_Unlock();
-                            GamePiece[2].FiveBox_Unlock();
-                            GamePiece[3].FiveBox_Unlock();
-                        }
-                        break;
-
-                    case "MenuItem_EndGame":
-                        {
-                            GameData.InputFromUI("MenuItem_Click" + "," + "EndGame" + "," + "End");
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Click. Message : " + Ex.Message);
-            }
         }
 
         private void TabControl_Selected(object sender, SelectionChangedEventArgs e)
@@ -637,6 +550,23 @@ namespace UI_Blokus
             {
                 switch ((sender as System.Windows.Controls.Button).Name)
                 {
+                    case "Btn_NewGame":
+                        {
+                            GameData.InputFromUI("Btn_Click" + "," + "NewGame" + "," + "End");
+                            GamePiece[0].FiveBox_Unlock();
+                            GamePiece[1].FiveBox_Unlock();
+                            GamePiece[2].FiveBox_Unlock();
+                            GamePiece[3].FiveBox_Unlock();
+                        }
+                        break;
+
+                    case "Btn_EndGame":
+                        {
+                            GameData.InputFromUI("Btn_Click" + "," + "EndGame" + "," + "End");
+                        }
+                        break;
+
+
                     default:
                         break;
                 }
@@ -647,475 +577,18 @@ namespace UI_Blokus
             }
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.RadioButton).Name)
-                {
-                    case "RadioButton_Blue":
-                        {
-                            for (int x = 0; x < 20; x++)
-                            {
-                                for (int y = 0; y < 20; y++)
-                                {
-                                    //((StackPanel_TwentyBox.Children[x] as StackPanel).Children[y] as OneBox).BoxColor = MyColor.Blue;
-                                }
-                            }
-                        }
-                        break;
-
-                    case "RadioButton_Green":
-                        {
-                            for (int x = 0; x < 20; x++)
-                            {
-                                for (int y = 0; y < 20; y++)
-                                {
-                                    //((StackPanel_TwentyBox.Children[x] as StackPanel).Children[y] as OneBox).BoxColor = MyColor.Green;
-                                }
-                            }
-                        }
-                        break;
-
-                    case "RadioButton_Red":
-                        {
-                            for (int x = 0; x < 20; x++)
-                            {
-                                for (int y = 0; y < 20; y++)
-                                {
-                                    //((StackPanel_TwentyBox.Children[x] as StackPanel).Children[y] as OneBox).BoxColor = MyColor.Red;
-                                }
-                            }
-                        }
-                        break;
-
-                    case "RadioButton_Yellow":
-                        {
-                            for (int x = 0; x < 20; x++)
-                            {
-                                for (int y = 0; y < 20; y++)
-                                {
-                                    //((StackPanel_TwentyBox.Children[x] as StackPanel).Children[y] as OneBox).BoxColor = MyColor.Yellow;
-                                }
-                            }
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When RadioButton Checked. Message:" + Ex.Message);
-            }
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.CheckBox).Name)
-                {
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When CheckBox Checked. Message:" + Ex.Message);
-            }
-        }
-
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.CheckBox).Name)
-                {
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When CheckBox Unchecked. Message:" + Ex.Message);
-            }
-        }
-
         private void OnKeyDownHandler(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.S && (Keyboard.Modifiers & (ModifierKeys.Control | ModifierKeys.Shift)) == (ModifierKeys.Control | ModifierKeys.Shift))
             {
                 ShowWindow(Hwnd, SW_SHOW);
-                MenuItem_Debug.Visibility = System.Windows.Visibility.Visible;
-                TabItem_DebugLog.Visibility = System.Windows.Visibility.Visible;
             }
 
             if (e.Key == Key.H && (Keyboard.Modifiers & (ModifierKeys.Control | ModifierKeys.Shift)) == (ModifierKeys.Control | ModifierKeys.Shift))
             {
                 ShowWindow(Hwnd, SW_HIDE);
-                MenuItem_Debug.Visibility = System.Windows.Visibility.Hidden;
-                TabItem_DebugLog.Visibility = System.Windows.Visibility.Hidden;
             }
         }
-        #endregion
-
-        #region "Debug"
-        private void MenuItem_Test_Checked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    case "MenuItem_DebugFunction01":
-                        {
-                            //DebugThread = new Thread(TestFunction01);
-                            //DebugThread.Start();
-
-                            GameColor foo = (GameColor)(2);
-                            Console.WriteLine("**********");
-                            Console.WriteLine(Convert.ToInt32(GameColor.Black));
-                            Console.WriteLine(foo);
-                            Console.WriteLine(Convert.ToInt32(foo));
-                            Console.WriteLine("**********");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction02":
-                        {
-                            string a = "aaa";
-                            string b = "aaa";
-                            string c = "ccc";
-
-                            GameColor aa = GameColor.Black;
-                            GameColor bb = GameColor.White;
-                            GameColor cc = GameColor.Black;
-
-                            Console.WriteLine("**********");
-                            Console.WriteLine(a.CompareTo(b));
-                            Console.WriteLine(a.CompareTo(c));
-                            Console.WriteLine(aa.CompareTo(bb));
-                            Console.WriteLine(aa.CompareTo(cc));
-                            Console.WriteLine("**********");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction03":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction04":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction05":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Been Clicked. Message:" + Ex.Message);
-            }
-        }
-
-        private void MenuItem_Test_Unchecked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    case "MenuItem_DebugFunction01":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction02":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction03":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction04":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction05":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Been Unclicked. Message:" + Ex.Message);
-            }
-        }
-
-        private void MenuItem_Test_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.MenuItem).Name)
-                {
-                    case "MenuItem_DebugFunction06":
-                        {
-                            var synthesizer = new SpeechSynthesizer();
-                            synthesizer.SetOutputToDefaultAudioDevice();
-                            synthesizer.Speak("All we need to do is to make sure we keep talking");
-
-                            Console.WriteLine("語音結束!");
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction07":
-                        {
-
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction08":
-                        {
-
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction09":
-                        {
-
-                        }
-                        break;
-
-                    case "MenuItem_DebugFunction10":
-                        {
-
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When MenuItem Been Clicked. Message:" + Ex.Message);
-                Console.WriteLine(string.Format("{0}", Ex.ToString()));
-            }
-        }
-
-        private void ImageBox_Test_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-            try
-            {
-
-            }
-            catch (Exception Ex)
-            {
-                System.Windows.MessageBox.Show(Ex.Message);
-            }
-        }
-
-        private void ImageBox_Test_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-
-        }
-
-        private void ImageBox_Test_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
-        {
-
-        }
-
-        private void ImageBox_Test_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
-        {
-
-        }
-
-        private void Button_Test_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.Button).Name)
-                {
-                    case "Button_Test01":
-                        {
-                            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-                            openFileDialog.Multiselect = false;
-                            openFileDialog.Filter = "Bitmap files (*.bmp)|*.bmp|JPEG files (*.jpg)|*.jpg|All files (*.*)|*.*";
-
-                            if (openFileDialog.ShowDialog() == true)
-                            {
-                                DebugBgrImage[0] = new Image<Bgr, byte>(openFileDialog.FileName);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Image Did not Open.");
-                            }
-                        }
-                        break;
-
-                    case "Button_Test02":
-                        {
-
-                        }
-                        break;
-
-                    case "Button_Test03":
-                        {
-
-                        }
-                        break;
-
-                    case "Button_Test04":
-                        {
-
-                        }
-                        break;
-
-                    case "Button_Test05":
-                        {
-
-                        }
-                        break;
-
-                    case "Button_Test06":
-                        {
-
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When Button Was Clicked. Message:" + Ex.Message);
-                Console.WriteLine(string.Format("{0}", Ex.ToString()));
-            }
-        }
-
-        private void CheckBox_Test_Checked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.CheckBox).Name)
-                {
-                    case "CheckBox_TestFlag01":
-                        {
-                            //DebugThread.Abort();
-
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag02":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag03":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag04":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag05":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When CheckBox Been Checked. Message:" + Ex.Message);
-            }
-        }
-
-        private void CheckBox_Test_Unchecked(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                switch ((sender as System.Windows.Controls.CheckBox).Name)
-                {
-                    case "CheckBox_TestFlag01":
-                        {
-                            //DebugThread.Abort();
-
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag02":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag03":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag04":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    case "CheckBox_TestFlag05":
-                        {
-                            System.Windows.MessageBox.Show("無功能", "訊息");
-                        }
-                        break;
-
-                    default:
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Console.WriteLine("Exception Occurred When CheckBox Been Unchecked. Message:" + Ex.Message);
-            }
-        }
-        #endregion
-
-        #region "Reserve"
-
         #endregion
     }
 }

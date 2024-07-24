@@ -1,0 +1,15 @@
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\bin\Debug\UI_Debugger.exe.config
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\bin\Debug\UI_Debugger.exe
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\bin\Debug\UI_Debugger.pdb
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\MainWindow.g.cs
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\App.g.cs
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger_MarkupCompile.cache
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger_MarkupCompile.lref
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\MainWindow.baml
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.g.resources
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.Properties.Resources.resources
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.csproj.GenerateResource.cache
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.csproj.CoreCompileInputs.cache
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.exe
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.pdb
+C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.csproj.AssemblyReference.cache

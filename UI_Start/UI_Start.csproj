@@ -131,6 +131,10 @@
       <Project>{84943fb7-ff5b-4b9d-a647-b056a4245a90}</Project>
       <Name>UI_ChineseCheckers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UI_Debugger\UI_Debugger.csproj">
+      <Project>{b32e4b64-68c0-4c8d-a19e-4dbb4acc2e00}</Project>
+      <Name>UI_Debugger</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -172,6 +176,12 @@
     <Resource Include="Icon\Unlock.ico" />
     <Resource Include="Icon\YellowMouse.cur" />
     <Resource Include="Icon\YellowMouse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\Rotate.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets" Condition="Exists('..\packages\EMGU.CV.4.1.1.3497\build\EMGU.CV.targets')" />

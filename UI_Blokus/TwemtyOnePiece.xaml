@@ -75,6 +75,7 @@
                     <Button x:Name="Btn_Turn" Height="30" Width="75" Click="Btn_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
+                                <Image Source="/Icon/Rotate.ico" Height="20"/>
                                 <TextBlock Text=" 翻轉"/>
                             </StackPanel>
                         </Button.Content>
@@ -84,6 +85,7 @@
                     <Button x:Name="Btn_Pass" Height="30" Width="75" Click="Btn_Click">
                         <Button.Content>
                             <StackPanel Orientation="Horizontal">
+                                <Image Source="/Icon/Stop.ico" Height="20"/>
                                 <TextBlock Text=" 停手"/>
                             </StackPanel>
                         </Button.Content>

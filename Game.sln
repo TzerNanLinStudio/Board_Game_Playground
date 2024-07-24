@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Blokus", "UI_Blokus\UI_B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameCore_Blokus", "GameCore_Blokus\GameCore_Blokus.csproj", "{D9C38E30-213A-4122-B56A-DAB03D11C49E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Debugger", "UI_Debugger\UI_Debugger.csproj", "{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -180,6 +182,26 @@ Global
 		{D9C38E30-213A-4122-B56A-DAB03D11C49E}.Release|x64.Build.0 = Release|Any CPU
 		{D9C38E30-213A-4122-B56A-DAB03D11C49E}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9C38E30-213A-4122-B56A-DAB03D11C49E}.Release|x86.Build.0 = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|ARM.Build.0 = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|x64.Build.0 = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Debug|x86.Build.0 = Debug|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|ARM.ActiveCfg = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|ARM.Build.0 = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|ARM64.Build.0 = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|x64.ActiveCfg = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|x64.Build.0 = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|x86.ActiveCfg = Release|Any CPU
+		{B32E4B64-68C0-4C8D-A19E-4DBB4ACC2E00}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
