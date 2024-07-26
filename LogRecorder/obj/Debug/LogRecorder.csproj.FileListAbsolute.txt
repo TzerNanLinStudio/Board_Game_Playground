@@ -37,4 +37,3 @@ C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\LogRecorder\bin\Debug\
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\LogRecorder\obj\Debug\LogRecorder.csproj.CoreCompileInputs.cache
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\LogRecorder\obj\Debug\LogRecorder_sharp.dll
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\LogRecorder\obj\Debug\LogRecorder_sharp.pdb
-C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\LogRecorder\obj\Debug\LogRecorder.csproj.AssemblyReference.cache

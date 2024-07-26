@@ -54,11 +54,12 @@
         <StackPanel Orientation="Vertical"  VerticalAlignment="Top">
             <Menu FontSize="12" HorizontalAlignment="Left" Height="20" Width="875"  Background="OrangeRed">
                 <MenuItem x:Name="MenuItem_Setting" Header="設定" Visibility="Visible">
-                    <MenuItem x:Name="MenuItem_NewGame" Header="開始遊戲" Click="MenuItem_Click"/>
-                </MenuItem>
-                <MenuItem x:Name="MenuItem_Tool" Header="工具" Visibility="Visible">
+                    <MenuItem x:Name="MenuItem_NewGame" Header="遊戲開始" Click="MenuItem_Click"/>
+                    <MenuItem x:Name="MenuItem_EndGame" Header="遊戲結算" Click="MenuItem_Click"/>
                 </MenuItem>
                 <MenuItem x:Name="MenuItem_Help" Header="說明" Visibility="Visible">
+                    <MenuItem x:Name="MenuItem_RulDetail" Header="遊戲介紹" Click="MenuItem_Click"/>
+                    <MenuItem x:Name="MenuItem_AuthorDetail" Header="作者介紹" Click="MenuItem_Click"/>
                 </MenuItem>
                 <MenuItem x:Name="MenuItem_Debug" Header="測試" IsEnabled="True" Visibility="Visible">
                     <MenuItem x:Name="MenuItem_DebugFunction06" Header="功能(1)" ToolTip="功能(1)" Click="MenuItem_Test_Click"/>

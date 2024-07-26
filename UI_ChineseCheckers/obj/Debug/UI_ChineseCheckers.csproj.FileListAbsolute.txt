@@ -251,14 +251,12 @@ C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\bin
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers.csproj.AssemblyReference.cache
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\MainWindow.g.cs
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\SinglePoint.g.cs
-C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\TestWindow.g.cs
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\App.g.cs
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers_MarkupCompile.cache
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers_MarkupCompile.lref
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\MainWindow.baml
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\SinglePoint.baml
-C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\TestWindow.baml
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers.g.resources
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers.Properties.Resources.resources
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_ChineseCheckers\obj\Debug\UI_ChineseCheckers.csproj.GenerateResource.cache

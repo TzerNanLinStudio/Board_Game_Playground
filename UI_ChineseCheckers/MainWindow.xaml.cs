@@ -251,13 +251,13 @@ namespace UI_ChineseCheckers
 
                 // Debug Initialization Or Setting
                 // --------------------------------------------------
-
+                MenuItem_Debug.Visibility = System.Windows.Visibility.Hidden;
                 // --------------------------------------------------
 
                 if (true)
                 {
                     IsInitializationFlag = false;
-                    //ShowWindow(Hwnd, SW_HIDE);
+                    ShowWindow(Hwnd, SW_HIDE);
                     Console.WriteLine("====================================================================================================");
                     Console.WriteLine("====================================================================================================");
                     Console.WriteLine("====================================================================================================" + "\n");
@@ -266,8 +266,8 @@ namespace UI_ChineseCheckers
             catch (Exception Ex)
             {
                 Console.WriteLine("Error Occurred In InitializeDetail. Message:" + Ex.Message);
-                //throw; 
-                //throw Ex;
+                // throw; 
+                // throw Ex;
             }
         }
 
@@ -413,11 +413,13 @@ namespace UI_ChineseCheckers
             if (e.Key == Key.S && (Keyboard.Modifiers & (ModifierKeys.Control | ModifierKeys.Shift)) == (ModifierKeys.Control | ModifierKeys.Shift))
             {
                 ShowWindow(Hwnd, SW_SHOW);
+                MenuItem_Debug.Visibility = System.Windows.Visibility.Visible;
             }
 
             if (e.Key == Key.H && (Keyboard.Modifiers & (ModifierKeys.Control | ModifierKeys.Shift)) == (ModifierKeys.Control | ModifierKeys.Shift))
             {
                 ShowWindow(Hwnd, SW_HIDE);
+                MenuItem_Debug.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 

@@ -12,4 +12,3 @@ C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.csproj.CoreCompileInputs.cache
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.exe
 C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.pdb
-C:\Users\goodc\OneDrive\Desktop\Git\Board_Game_Playground\UI_Debugger\obj\Debug\UI_Debugger.csproj.AssemblyReference.cache

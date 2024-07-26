@@ -10,7 +10,7 @@
 
     <Grid KeyDown="Grid_KeyDown">
         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" MinHeight="20" MaxHeight="20">
+            <StackPanel Orientation="Horizontal">
                 <Menu FontSize="12" HorizontalAlignment="Left" Height="20" Width="1200" VerticalAlignment="Top"  Background="OrangeRed">
                     <MenuItem x:Name="MenuItem_Setting" Header="設定" Visibility="Visible">
                         <MenuItem x:Name="MenuItem_NewGame" Header="重新" Click="MenuItem_Click"/>
@@ -28,7 +28,7 @@
                 <Label Content="IP : "/>
                 <TextBox x:Name="TextBox_IP" Height="25" Width="100"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" MinHeight="20" MaxHeight="100">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="Btn_TcpServer" Height="30" Width="75" Click="Btn_Click">
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
@@ -44,7 +44,36 @@
                     </Button.Content>
                 </Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" MinHeight="120" MaxHeight="120">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <ComboBox Name="ComboBox_CursorSelector" Width="100" SelectionChanged="ComboBox_SelectionChanged">
+                    <ComboBoxItem Content="AppStarting" />
+                    <ComboBoxItem Content="ArrowCD" />
+                    <ComboBoxItem Content="Arrow" />
+                    <ComboBoxItem Content="Cross" />
+                    <ComboBoxItem Content="HandCursor" />
+                    <ComboBoxItem Content="Help" />
+                    <ComboBoxItem Content="IBeam" />
+                    <ComboBoxItem Content="No" />
+                    <ComboBoxItem Content="None" />
+                    <ComboBoxItem Content="Pen" />
+                    <ComboBoxItem Content="ScrollSE" />
+                    <ComboBoxItem Content="ScrollWE" />
+                    <ComboBoxItem Content="SizeAll" />
+                    <ComboBoxItem Content="SizeNESW" />
+                    <ComboBoxItem Content="SizeNS" />
+                    <ComboBoxItem Content="SizeNWSE" />
+                    <ComboBoxItem Content="SizeWE" />
+                    <ComboBoxItem Content="UpArrow" />
+                    <ComboBoxItem Content="WaitCursor" />
+                    <ComboBoxItem Content="Custom" />
+                </ComboBox>
+                <Border Name="DisplayArea" Height="250" Width="400" Margin="20" Background="AliceBlue">
+                    <Label HorizontalAlignment="Center">
+                        Move Mouse Pointer Over This Area
+                    </Label>
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <TabControl TabStripPlacement="Top" HorizontalAlignment="Left" Width="1025" Height="120" VerticalAlignment="Top">
                     <TabControl.Resources>
                         <Style TargetType="{x:Type TabItem}">
